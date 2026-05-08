@@ -1,0 +1,63 @@
+# Python Project: Math Game
+import random
+
+#Menu
+# until correct input loop create
+def main_menu():
+    choice = input("--------- Math Game ---------\n\n"
+                     "1. Έναρξη παιχνιδιού\n"
+                     "2. Οδηγίες\n"
+                     "3. Έξοδος\n\n"
+                     "📌 Επιλέξτε 1-3: ")
+    
+    # Choices for menu
+    if choice == '1':
+        play_game()
+    elif choice == '2':
+        show_instructions()
+    elif choice == '3':
+        print("Ευχαριστούμε που παίξατε!")
+    else:
+        print("Άκυρη επιλογή. Παρακαλώ δοκιμάστε ξανά.")
+
+# All operations with rounds message
+def play_game():
+    score = 0
+
+    for i in range(1,11):
+        operation = random.choice(['+', '-', '*',])
+        num1 = random.randint(1, 20)
+        num2 = random.randint(1, 20)
+
+        print("\n-------------------------------------")
+        print(f"Γύρος: {i}/10")
+
+        answer = int(input(f"Πόσο κάνει {num1} {operation} {num2} : "))
+        if operation == '+':
+            correct_answer = num1 + num2
+        elif operation == '-':
+            correct_answer = num1 - num2
+        elif operation == '*':
+            correct_answer = num1 * num2
+        if answer == correct_answer:
+            print("✅ Σωστά!")
+            score += 1
+        else:
+            print(f"❌ Λάθος! Η σωστή απάντηση είναι {correct_answer}.")
+
+
+    print("\n-------------------------------------")
+    print(f"⭐ Το τελικό σου σκορ είναι: {score}/10")
+
+# Instructions unpolished
+def show_instructions():
+    print("\n")
+    print("--------- Οδηγίες ---------\n")
+    print("1️⃣  Το παιχνίδι έχει 10 γύρους.\n" 
+              "2️⃣  Σε κάθε γύρο εμφανίζεται μία μαθηματική πράξη.\n" 
+              "3️⃣  Αν απαντήσεις σωστά, παίρνεις 1 πόντο.\n" 
+              "4️⃣  Στο τέλος εμφανίζεται το συνολικό σου σκορ.")
+    
+
+main_menu()
+
