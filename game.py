@@ -71,7 +71,7 @@ def play_game():
             athroisma = num1 + num2
             print(f"Γύρος: {i}/10")
             answer = int(input(f"Γράψε πόσο κάνει{num1}+{num2}: \n"))
-            def countdown(seconds):
+            def countdown(seconds):           #Η αντίστροφη μέτρηση δημιουργεί πρόβλημα. Μήπως να έχουμε 2 επίπεδα;
             while seconds > 0:
             print(f"Απομένουν: {seconds} δευτερόλεπτα", end="\r")
             time.sleep(1)
