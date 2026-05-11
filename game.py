@@ -70,13 +70,13 @@ def play_game():
         if epipedo == "Γ":
             athroisma = num1 + num2
             print(f"Γύρος: {i}/10")
-            answer = int(input(f"Γράψε πόσο κάνει{num1}+{num2}: \n"))
+            answer = int(input(f"Γράψε πόσο κάνει {num1} + {num2}: \n"))
             def countdown(seconds):           #Η αντίστροφη μέτρηση δημιουργεί πρόβλημα. Μήπως να έχουμε 2 επίπεδα;
-            while seconds > 0:
-            print(f"Απομένουν: {seconds} δευτερόλεπτα", end="\r")
-            time.sleep(1)
-            seconds -= 1
-            print("Τέλος χρόνου! Μπαμ! 💥")
+                while seconds > 0:
+                    print(f"Απομένουν: {seconds} δευτερόλεπτα", end="\r")
+                    time.sleep(1)
+                    seconds -= 1
+                    print("Τέλος χρόνου! Μπαμ! 💥")
  
             if answer==athroisma:
                  print("✅ Σωστά!Κερδίζεις έναν βαθμό!")
