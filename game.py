@@ -71,12 +71,12 @@ def play_game():
             athroisma = num1 + num2
             print(f"Γύρος: {i}/10")
             answer = int(input(f"Γράψε πόσο κάνει{num1}+{num2}: \n"))
-            def countdown(seconds):           #Η αντίστροφη μέτρηση δημιουργεί πρόβλημα. Μήπως να έχουμε 2 επίπεδα;
-            while seconds > 0:
-            print(f"Απομένουν: {seconds} δευτερόλεπτα", end="\r")
-            time.sleep(1)
-            seconds -= 1
-            print("Τέλος χρόνου! Μπαμ! 💥")
+            def countdown(seconds):
+                 while seconds > 0:
+                      print(f"Απομένουν: {seconds} δευτερόλεπτα", end="\r")
+                      time.sleep(1)
+                      seconds -= 1
+                      print("Τέλος χρόνου! Μπαμ! 💥")
  
             if answer==athroisma:
                  print("✅ Σωστά!Κερδίζεις έναν βαθμό!")
@@ -125,18 +125,18 @@ def play_game():
                 print(f"❌ Λάθος! Η σωστή απάντηση είναι:{num1} - {num2} = {diafora}")
 
         if epipedo == "Γ":
-            if num1>nam2:
+            if num1>num2:
                 diafora = num1 - num2
             else:
                 diafora = num2 - num1
             print(f"Γύρος: {i}/10")
-            answer = int(input(f"Γράψε πόσο κάνει{num1}+{num2}: \n"))
+            answer = int(input(f"Γράψε πόσο κάνει {num1} + {num2}: \n"))
             def countdown(seconds):
-            while seconds > 0:
-            print(f"Απομένουν: {seconds} δευτερόλεπτα", end="\r")
-            time.sleep(1)
-            seconds -= 1
-            print("Τέλος χρόνου! Μπαμ! 💥")
+                 while seconds > 0:
+                      print(f"Απομένουν: {seconds} δευτερόλεπτα", end="\r")
+                      time.sleep(1)
+                      seconds -= 1
+                      print("Τέλος χρόνου! Μπαμ! 💥")
  
         if answer==diafora:
                  print("✅ Σωστά!Κερδίζεις έναν βαθμό!")
@@ -181,19 +181,19 @@ def play_game():
 
         if epipedo == "Γ":
             def countdown(seconds):
-            while seconds > 0:
-            print(f"Απομένουν: {seconds} δευτερόλεπτα", end="\r")
-            time.sleep(1)
-            seconds -= 1
-            print("Τέλος χρόνου! Μπαμ! 💥")
-            ginomeno = num1 * num2
-            print(f"Γύρος: {i}/10")
-            answer = int(input(f"Γράψε πόσο κάνει{num1}*{num2}: \n"))
-            if answer==ginomeno:
-                 print("✅ Σωστά!Κερδίζεις έναν βαθμό!")
-                 score +=1
-            else:
-                print(f"❌ Λάθος! Η σωστή απάντηση είναι:{num1} * {num2}= {ginomeno}")
+                 while seconds > 0:
+                      print(f"Απομένουν: {seconds} δευτερόλεπτα", end="\r")
+                      time.sleep(1)
+                      seconds -= 1
+                      print("Τέλος χρόνου! Μπαμ! 💥")
+                      ginomeno = num1 * num2
+                      print(f"Γύρος: {i}/10")
+                      answer = int(input(f"Γράψε πόσο κάνει{num1}*{num2}: \n"))
+                      if answer==ginomeno:
+                           print("✅ Σωστά!Κερδίζεις έναν βαθμό!")
+                           score +=1
+                           else:
+                           print(f"❌ Λάθος! Η σωστή απάντηση είναι:{num1} * {num2}= {ginomeno}")
 
     print("\n-------------------------------------")
     print(f"⭐ Το τελικό σου σκορ είναι: {score}/10")
@@ -223,6 +223,3 @@ arxiko_menu()
 
 
         
-
-
-
